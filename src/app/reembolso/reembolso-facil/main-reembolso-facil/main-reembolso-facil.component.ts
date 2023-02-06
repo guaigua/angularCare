@@ -26,11 +26,21 @@ export class MainReembolsoFacilComponent implements OnInit {
   profisionales = PROFISIONALES;
   
   uploadForm = this.fb.group({
-    name: ['', [Validators.required]],
+    despensa: ['', [Validators.required]],
+    especialidade: ['', [Validators.required]],
+    prestador: ['', [Validators.required]],
+    profisional: ['', [Validators.required]],
     document: ['', [Validators.required]],
     file_64: [''],
     type_document: ['', [Validators.required]],
   });
+  
+  countrylist: any[] | undefined;
+  selected: string = "";
+  despensa: string = "";
+  especialidade: string = "";
+  profisional: string = "";
+  prestador: string = "";
 
   constructor(
     private fb: FormBuilder,
@@ -38,13 +48,18 @@ export class MainReembolsoFacilComponent implements OnInit {
 
 
   
-  ngOnInit() { }
+  ngOnInit() {}
 
   public uploader:FileUploader = new FileUploader({
     url: "./",})
 
   uploadSubmit(){
-    console.log
+    console.log(this.uploadForm.value);
+  }
+
+  selectName(name: any) {
+    console.log(name);
+    console.log(this.selected);
   }
 
 }

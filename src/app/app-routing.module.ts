@@ -4,7 +4,7 @@ import { MainReembolsoFacilComponent } from './reembolso/reembolso-facil/main-re
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+ 
   { path: 'reembolsoFacil', component: MainReembolsoFacilComponent },
 ];
 

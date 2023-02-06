@@ -10,6 +10,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MaterialModule } from './shared/modules/material/material.module';
 import { ReembolsoModule } from './reembolso/reembolso.module';
+import { UtilsModule } from './utils/utils.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ReembolsoModule } from './reembolso/reembolso.module';
     BrowserAnimationsModule,
     ReembolsoModule,
     MaterialModule,
+    UtilsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
