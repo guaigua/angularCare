@@ -6,7 +6,7 @@ import { MaterialModule } from 'src/app/shared/modules/material/material.module'
 import { Step1Component } from './step1/step1.component';
 import { Step2Component } from './step2/step2.component';
 import { Step3Component } from './step3/step3.component';
-
+import { FileUploadModule } from 'ng2-file-upload';
 @NgModule({
   declarations: [
     MainReembolsoFacilComponent,
@@ -18,7 +18,8 @@ import { Step3Component } from './step3/step3.component';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    FileUploadModule
   ]
 })
 export class ReembolsoFacilModule { }
