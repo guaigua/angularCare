@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MainReembolsoFacilComponent } from './reembolso/reembolso-facil/main-reembolso-facil/main-reembolso-facil.component';
 
-const routes: Routes = [];
+
+const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'reembolsoFacil', component: MainReembolsoFacilComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
