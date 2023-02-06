@@ -7,12 +7,14 @@ import { Step1Component } from './step1/step1.component';
 import { Step2Component } from './step2/step2.component';
 import { Step3Component } from './step3/step3.component';
 import { FileUploadModule } from 'ng2-file-upload';
+import { CreaPrestadorComponent } from './crea-prestador/crea-prestador.component';
 @NgModule({
   declarations: [
     MainReembolsoFacilComponent,
     Step1Component,
     Step2Component,
-    Step3Component
+    Step3Component,
+    CreaPrestadorComponent
   ],
   imports: [
     CommonModule,

@@ -57,9 +57,8 @@ export class MainReembolsoFacilComponent implements OnInit {
     console.log(this.uploadForm.value);
   }
 
-  selectName(name: any) {
+  openCreaPrestador(){
     console.log(name);
-    console.log(this.selected);
   }
 
 }
