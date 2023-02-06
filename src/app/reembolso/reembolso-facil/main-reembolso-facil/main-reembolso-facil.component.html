@@ -1,6 +1,9 @@
 
 <div class="container mt-5 col-md-6">
-    <form role="form" [formGroup]="uploadForm" (ngSubmit)="uploadSubmit()">
+    <div class="header">
+        <h2 class="title" id="title">Solicitação de Reembolso</h2>
+    </div>
+    <form role="form" [formGroup]="reembolsoForm" (ngSubmit)="reembolsoSubmit()">
         <div class="input-group mb-3" >
             <select class="custom-select" id="despensa" formControlName='despensa' >
             <option value="" selected disabled>Tipo de reembolso</option>

@@ -25,7 +25,7 @@ export class MainReembolsoFacilComponent implements OnInit {
   prestadores = PRESTADORES;
   profisionales = PROFISIONALES;
   
-  uploadForm = this.fb.group({
+  reembolsoForm = this.fb.group({
     despensa: ['', [Validators.required]],
     especialidade: ['', [Validators.required]],
     prestador: ['', [Validators.required]],
@@ -53,8 +53,8 @@ export class MainReembolsoFacilComponent implements OnInit {
   public uploader:FileUploader = new FileUploader({
     url: "./",})
 
-  uploadSubmit(){
-    console.log(this.uploadForm.value);
+  reembolsoSubmit(){
+    console.log(this.reembolsoForm.value);
   }
 
   openCreaPrestador(){

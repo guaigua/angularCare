@@ -11,10 +11,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MaterialModule } from './shared/modules/material/material.module';
 import { ReembolsoModule } from './reembolso/reembolso.module';
 import { UtilsModule } from './utils/utils.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent
   ],
   imports: [
     ReactiveFormsModule,
