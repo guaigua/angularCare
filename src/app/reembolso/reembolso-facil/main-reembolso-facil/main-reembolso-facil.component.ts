@@ -1,7 +1,9 @@
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-
+import { DESPENSAS } from 'src/app/shared/lists/listDespensas';
+import { ESPECIALIDADES } from 'src/app/shared/lists/listEspecialidade';
+import { PRESTADORES } from 'src/app/shared/lists/listPrestador';
+import { PROFISIONALES } from 'src/app/shared/lists/listProfisional';
 @Component({
   selector: 'app-main-reembolso-facil',
   templateUrl: './main-reembolso-facil.component.html',
@@ -13,17 +15,17 @@ import { FormBuilder, Validators } from '@angular/forms';
     },
   ],
 })
+
 export class MainReembolsoFacilComponent implements OnInit {
-  firstFormGroup = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
-  });
-  secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
-  });
+  despensas = DESPENSAS;
+  especialidades = ESPECIALIDADES;
+  prestadores = PRESTADORES;
+  profisionales = PROFISIONALES;
 
-  constructor(private _formBuilder: FormBuilder) {}
 
-  ngOnInit(): void {
-  }
+  
+  ngOnInit() { }
+
+
 
 }

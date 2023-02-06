@@ -1,0 +1,12 @@
+
+
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" 
+      type="button" id="menu1" data-toggle="dropdown" ng-click="toggled" ng-bind='selected'>Tutorials
+        <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+        <li *ngFor="let despensa of despensas" role="presentation" ng-repeat="choice in items">
+            <a role="menuitem" ng-click="setTutorial(choice)" tabindex="-1" href="#">{{despensa.name}}</a>
+        </li>
+    </ul>
+</div>

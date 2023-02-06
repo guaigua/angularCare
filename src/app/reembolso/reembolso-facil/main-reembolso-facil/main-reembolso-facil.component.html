@@ -1,38 +1,39 @@
-<mat-stepper #stepper>
-  <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
-    <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Fill out your name</ng-template>
-      <mat-form-field appearance="fill">
-        <mat-label>Name</mat-label>
-        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-      </mat-form-field>
-      <div>
-        <p>Go to a different step to see the error state</p>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
-    <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out your address</ng-template>
-      <mat-form-field appearance="fill">
-        <mat-label>Address</mat-label>
-        <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="secondCtrl"
-               required>
-      </mat-form-field>
-      <div>
-        <p>Go to a different step to see the error state</p>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    <p>You are now done.</p>
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
+
+<div class="container">
+    <div class="input-group mb-3" >
+        <select class="custom-select" id="inputGroupSelect01"  >
+        <option selected>Tipo de reembolso</option>
+        <option *ngFor="let despensa of despensas" value="{{despensa.id}}">{{despensa.name}}</option>
+        </select>
     </div>
-  </mat-step>
-</mat-stepper>
+
+    <div class="input-group mb-3" >
+        <select class="custom-select" id="inputGroupSelect02"  >
+        <option selected>Especialidade</option>
+        <option *ngFor="let especialidade of especialidades" value="{{especialidade.id}}">{{especialidade.name}}</option>
+        </select>
+    </div>
+
+    <div class="input-group mb-3" >
+        <select class="custom-select" id="inputGroupSelect03"  >
+        <option selected>Nome do Prestador </option>
+        <option *ngFor="let prestador of prestadores" value="{{prestador.id}}">{{prestador.name}}</option>
+        </select>
+        <div class="input-group-append">
+            <label class="input-group-text" for="inputGroupSelect02">+</label>
+        </div>
+    </div>
+
+    <div class="input-group mb-3" >
+        <select class="custom-select" id="inputGroupSelect03"  >
+        <option selected>Nome do Profisional</option>
+        <option *ngFor="let profisional of profisionales" value="{{profisional.id}}">{{profisional.name}}</option>
+        </select>
+        <div class="input-group-append">
+            <label class="input-group-text" for="inputGroupSelect02">+</label>
+        </div>
+    </div>
+
+
+    
+</div>
