@@ -6,7 +6,7 @@
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <form>
+        <form [formGroup]="prestadorForm" (ngSubmit)="prestadoSubmit()">
             <div class="container mt-3">
                 <div class="form-group">
                     <input type="text" class="form-control" id="cpf" aria-describedby="emailHelp" placeholder="CPF/CNPJ">
