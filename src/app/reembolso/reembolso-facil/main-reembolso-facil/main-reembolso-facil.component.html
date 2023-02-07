@@ -53,12 +53,28 @@
             </div>
         </div>
 
-        <div class="mt-2 mb-2">
-            <div class="drop-zone">
-            <div ng2FileDrop [uploader]="uploader" class="drop-zone">
-                Drag and drop files to upload
-            </div>
-            </div>
+        <div class="row">
+            <mat-tab-group>
+                <mat-tab label="Upload arquivos">                      
+                    <div class="drop-zone">
+                        <div ng2FileDrop [uploader]="uploader" class="drop-zone">
+                            <input type="file" ng2FileSelect [uploader]="uploader" multiple  /><br/>
+                            Arraste e solte os arquivos para upload
+                        </div>
+                    </div>  
+                </mat-tab>
+                <mat-tab label="Carregar links">
+                    <div class="col-md-12 mt-2 mb-2  text-center align-self-end">
+                        <button 
+                        type="button" 
+                        class="btn btn-primary"
+                        id="Carregar"
+                        name="Carregar" 
+                        >Carregar links da faturas
+                        </button>
+                    </div>  
+                 </mat-tab>
+              </mat-tab-group>
         </div>
 
         <div class="container-fluid">
@@ -93,7 +109,7 @@
                 <div class="col-md-6 text-center align-self-end mb-3">
                     <button 
                         type="button" 
-                        class="btn btn-primary"
+                        class="btn btn-secondary"
                         id="back"
                         name="back" 
                         >Voltar
