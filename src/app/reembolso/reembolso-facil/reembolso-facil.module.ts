@@ -8,6 +8,7 @@ import { Step2Component } from './step2/step2.component';
 import { Step3Component } from './step3/step3.component';
 import { FileUploadModule } from 'ng2-file-upload';
 import { CreaPrestadorComponent } from './crea-prestador/crea-prestador.component';
+import { BeneficiariosModule } from 'src/app/beneficiarios/beneficiarios.module';
 @NgModule({
   declarations: [
     MainReembolsoFacilComponent,
@@ -18,10 +19,11 @@ import { CreaPrestadorComponent } from './crea-prestador/crea-prestador.componen
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule,
     FormsModule,
+    ReactiveFormsModule,
     MaterialModule,
-    FileUploadModule
+    FileUploadModule,
+    BeneficiariosModule
   ]
 })
 export class ReembolsoFacilModule { }

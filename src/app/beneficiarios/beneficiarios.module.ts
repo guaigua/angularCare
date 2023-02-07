@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RegistrarBeneficiariosComponent } from './registrar-beneficiarios/registrar-beneficiarios.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MaterialModule } from '../shared/modules/material/material.module';
 
 
 
@@ -9,7 +11,13 @@ import { RegistrarBeneficiariosComponent } from './registrar-beneficiarios/regis
     RegistrarBeneficiariosComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialModule,
+  ],
+  exports:[
+    RegistrarBeneficiariosComponent
   ]
 })
 export class BeneficiariosModule { }

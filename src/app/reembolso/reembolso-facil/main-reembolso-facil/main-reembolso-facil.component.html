@@ -4,6 +4,17 @@
         <h2 class="title" id="title">Solicitação de Reembolso</h2>
     </div>
     <form role="form" [formGroup]="reembolsoForm" (ngSubmit)="reembolsoSubmit()">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Selecione o beneficiário" aria-label="Default" aria-describedby="inputGroup-sizing-default"  list="beneficiarios" name="beneficiario" formControlName='beneficiario' />
+            <datalist id="beneficiarios">
+                <select>
+                    <option *ngFor="let beneficiario of beneficiarios" value="{{beneficiario.name}}">{{beneficiario.name}}</option>
+                </select>
+            </datalist>
+            <div class="input-group-append">
+                <label class="input-group-text" for="inputGroupSelect02" data-toggle="modal" data-target="#creaBeneficiarioModal">+</label>
+            </div>
+        </div>
         <div class="input-group mb-3" >
             <select class="custom-select" id="despensa" formControlName='despensa' >
             <option value="" selected disabled>Tipo de reembolso</option>
@@ -104,5 +115,13 @@
     <!-- Modal -->
     <div class="modal fade" id="creaPrestadorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <app-crea-prestador></app-crea-prestador>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="creaBeneficiarioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <app-registrar-beneficiarios></app-registrar-beneficiarios>
+            </div>
+        </div>
     </div>
 </div>

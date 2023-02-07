@@ -11,12 +11,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MaterialModule } from './shared/modules/material/material.module';
 import { ReembolsoModule } from './reembolso/reembolso.module';
 import { UtilsModule } from './utils/utils.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { QuadroComponent } from './quadro/quadro.component';
+import { BeneficiariosModule } from './beneficiarios/beneficiarios.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    QuadroComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -26,6 +27,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     NgbModule,
     BrowserAnimationsModule,
     ReembolsoModule,
+    BeneficiariosModule,
     MaterialModule,
     UtilsModule
   ],

@@ -1,1 +1,41 @@
-<p>registrar-beneficiarios works!</p>
+
+<div class="container">
+    <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">Dados do Beneficiário</h2>
+    </div>
+    <form [formGroup]="beneficiarioForm" (ngSubmit)="prestadoSubmit()">
+        <div class="mt-3">
+            <div class="form-group">
+                <input type="text" class="form-control" id="cpf" aria-describedby="cpf" placeholder="CPF">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="nome" aria-describedby="nome" placeholder="Nome">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="sobrenome" aria-describedby="sobrenome" placeholder="Sobrenome">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="emailParticular" placeholder="Email Particular">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="emailProfisional" placeholder="Email Profissional">
+            </div>
+            
+            <div class="form-group">
+                <input type="text" class="form-control" id="celular" placeholder="Celular">
+            </div>
+            <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                    Eu aceito os <a href="termos">termos e condições</a>
+                </label>
+              </div>
+    
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </form>
+</div>

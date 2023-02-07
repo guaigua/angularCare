@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegistrarBeneficiariosComponent } from './beneficiarios/registrar-beneficiarios/registrar-beneficiarios.component';
+import { QuadroComponent } from './quadro/quadro.component';
 import { MainReembolsoFacilComponent } from './reembolso/reembolso-facil/main-reembolso-facil/main-reembolso-facil.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: '', redirectTo: 'quadro', pathMatch: 'full' },
+  { path: 'quadro', component: QuadroComponent },
+  { path: 'registrarBeneficiários', component: RegistrarBeneficiariosComponent },
   { path: 'reembolsoFacil', component: MainReembolsoFacilComponent },
 ];
 

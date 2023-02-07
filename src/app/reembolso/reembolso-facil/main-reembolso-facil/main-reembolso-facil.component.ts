@@ -6,6 +6,7 @@ import { PRESTADORES } from 'src/app/shared/lists/listPrestador';
 import { PROFISIONALES } from 'src/app/shared/lists/listProfisional';
 import { FileUploader } from 'ng2-file-upload';
 import { FormBuilder, Validators } from '@angular/forms';
+import { BENEFICIARIOS } from 'src/app/shared/lists/listBeneficiario';
 
 @Component({
   selector: 'app-main-reembolso-facil',
@@ -24,12 +25,14 @@ export class MainReembolsoFacilComponent implements OnInit {
   especialidades = ESPECIALIDADES;
   prestadores = PRESTADORES;
   profisionales = PROFISIONALES;
+  beneficiarios = BENEFICIARIOS;
   
   reembolsoForm = this.fb.group({
     despensa: ['', [Validators.required]],
     especialidade: ['', [Validators.required]],
     prestador: ['', [Validators.required]],
     profisional: ['', [Validators.required]],
+    beneficiario:[''],
     document: ['', [Validators.required]],
     file_64: [''],
     type_document: ['', [Validators.required]],
